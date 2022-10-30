@@ -1,9 +1,42 @@
-import React from 'react'
+import React from "react";
 
 const Chats = () => {
   return (
-    <div>Chats</div>
-  )
-}
+    <div className="chats">
+      <div className="userChat">
+        <img
+          src="https://images.pexels.com/photos/14113987/pexels-photo-14113987.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          alt=""
+        />
+        <div className="userChatInfo">
+          <span>Nityansh</span>
+          <p>Hello</p>
+        </div>
+      </div>
 
-export default Chats
+      <div className="userChat">
+        <img
+          src="https://images.pexels.com/photos/14113987/pexels-photo-14113987.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          alt=""
+        />
+        <div className="userChatInfo">
+          <span>Nityansh</span>
+          <p>Hello</p>
+        </div>
+      </div>
+
+      <div className="userChat">
+        <img
+          src="https://images.pexels.com/photos/14113987/pexels-photo-14113987.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          alt=""
+        />
+        <div className="userChatInfo">
+          <span>Nityansh</span>
+          <p>Hello</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Chats;
