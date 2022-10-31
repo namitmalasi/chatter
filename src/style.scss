@@ -1,3 +1,20 @@
+@mixin mobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -86,10 +103,20 @@ body {
     height: 80%;
     display: flex;
     overflow: hidden;
+    @include tablet {
+      width: 90%;
+    }
+    @include mobile {
+      width: 90%;
+    }
 
     .sidebar {
       flex: 1;
       background-color: #3e3c61;
+      position: relative;
+      @include mobile {
+        width: 25%;
+      }
 
       .navbar {
         display: flex;
@@ -102,6 +129,9 @@ body {
 
         .logo {
           font-weight: bold;
+          @include tablet {
+            display: none;
+          }
         }
 
         .user {
@@ -122,6 +152,14 @@ body {
             font-size: 10px;
             border: none;
             cursor: pointer;
+            @include tablet {
+              position: absolute;
+              bottom: 10px;
+            }
+            @include mobile {
+              font-size: 20px;
+              padding: 10px;
+            }
           }
         }
       }
@@ -184,6 +222,9 @@ body {
         justify-content: space-between;
         padding: 10px;
         color: lightgray;
+        @include mobile() {
+          width: 100%;
+        }
       }
 
       .chatIcons {
